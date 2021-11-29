@@ -1,0 +1,49 @@
+<div class="container border">
+  <div class="row text-center">
+    <div class="col-sm-12">
+      <h2>Opret Server</h2>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <!--server name-->
+    <div class="col-sm-4">
+      <label>Server Name</label>
+    </div>
+
+    <!--input field-->
+    <div class="col-sm-4">
+      <input type="text" [(ngModel)]="serverName" />
+    </div>
+
+    <!--Add server button-->
+    <div class="col-sm-4">
+      <button class="btn btn-primary" [disabled]="serverName === ''" (click)="onCreateServer()">Add Server</button>
+    </div>
+
+
+
+    <!--show if server is created-->
+    <div *ngIf="serverIsCreated">
+      <p>{{ serverCreationStatus }}</p>
+    </div>
+  </div>
+
+  <app-server *ngFor="let server of servers"></app-server>
+
+</div>
+
+<hr>
+
+<div class="container border">
+  <div class="row">
+
+    <div class="col-sm-12">
+      <app-Details></app-Details>
+
+    </div>
+
+  </div>
+  
+</div>

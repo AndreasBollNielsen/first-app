@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+.border{
+  background-color: rgb(240, 206, 206);
+  border: rgb(255, 65, 65);
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+}

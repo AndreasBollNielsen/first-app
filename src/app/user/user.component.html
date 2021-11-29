@@ -1,0 +1,20 @@
+<div class="container border">
+    <div class="row">
+
+        <!--input field-->
+        <div class="col-sm-12 form-group">
+            <label for="user">indtast brugernavn</label>
+            <!-- <input type="text" id="user" class="form-control" (input)="onUserNameUpdate($event)"> -->
+            <input type="text" id="user" class="form-control" [(ngModel)]="userName" (input)="onUserNameUpdate($event)">
+            <p>{{userName}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--reset button-->
+        <div class="col-sm-12" style="padding-bottom: 5px;">
+            <button [disabled]="userName === ''" class="btn btn-primary" (click)="onResetuserName()">Reset</button>
+        </div>
+    </div>
+
+</div>

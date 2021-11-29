@@ -1,0 +1,23 @@
+
+<!--show details button-->
+
+  <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+
+
+<p *ngIf="showDetails">
+  This is my list of details
+</p>
+
+
+
+
+
+<div *ngIf="showDetails">
+  <div [ngStyle]="{backgroundColor: GetColor(i)}" [ngClass]="{indexer: i >= 4}" *ngFor="let number of log; let i = index ">
+   click {{number}}
+    </div>
+</div>
+
+
+
+
